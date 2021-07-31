@@ -1,3 +1,3 @@
-FROM ${GRAFANA_IMAGE}
+FROM ${GF_IMAGE}
 
 ADD ./grafana.ini /etc/grafana/grafana.ini

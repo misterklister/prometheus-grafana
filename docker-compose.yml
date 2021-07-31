@@ -20,9 +20,9 @@ services:
   prometheus:
     build:
       context: ./services/prometheus
-    container_name: ${PROMETHEUS_CONTAINER_NAME}
+    container_name: ${PROM_CONTAINER_NAME}
     ports:
-      - ${PROMETHEUS_PORT}:9090
+      - ${PROM_PORT}:9090
     networks:
       - custom_net
     command: "--config.file=/etc/prometheus/prometheus.yml --web.enable-lifecycle"
