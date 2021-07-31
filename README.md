@@ -20,7 +20,7 @@ admin_password = admin
 See `services/prometheus/targets.json`
 
 ### Hot reload scrape targets
-Make changes to `services/prometheus/targets.json` on your host. Then either run:
+Make changes to `services/prometheus/targets.json` on your host. Then run the reload script:
 ```
 sh scripts/prometheus-reload.sh
 ```
