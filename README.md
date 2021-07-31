@@ -1,6 +1,6 @@
 # prometheus-grafana
 
-## Prometheus
+## Grafana
 
 ### Configure default user
 
@@ -12,6 +12,8 @@ admin_user = admin
 # default admin password, can be changed before first start of grafana, or in profile settings
 admin_password = admin
 ```
+
+## Prometheus
 
 ### Configure scrape targets
 
