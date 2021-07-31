@@ -25,8 +25,6 @@ Make changes to `services/prometheus/targets.json` on your host. Then either run
 sh scripts/prometheus-reload.sh
 ```
 
-Or see contents of `scripts/prometheus-reload.sh`, if you changed the default ports.
-
 ## Run
 
 1. Run `docker-compose up -d`
