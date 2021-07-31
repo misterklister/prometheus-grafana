@@ -21,6 +21,8 @@ Then run the reload script for it to take effect:
 sh scripts/prometheus-reload.sh
 ```
 
+So you don't have to rebuild to update it.
+
 ## Grafana
 
 Grafana is already preconfigured to use the Prometheus service as the data source.
