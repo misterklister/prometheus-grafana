@@ -1,5 +1,3 @@
-# prometheus-grafana
-
 # Grafana
 
 ## Configure default user
