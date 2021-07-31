@@ -13,18 +13,25 @@ You will be prompted to change these, after the first login.
 
 ## Prometheus
 
-### Make changes to and reload scrape targets
+### Scrape targets
+
+#### Making changes
 Change the contents of `services/prometheus/targets.json` on your host. 
 
-Then run the reload script for it to take effect:
+#### Applying changes
+
+Run the reload script for changes to take effect:
 ```
 sh scripts/prometheus-reload.sh
 ```
 
-So you don't have to rebuild to update it.
 
 ## Grafana
 
-Grafana is already preconfigured to use the Prometheus service as the data source.
+### Preconfigured datasources
+
+The Prometheus service is preconfigured as a Grafana datasource.
+
+### Grafana data folder
 
 The data is stored and accessible in `data/grafana` on your host.
