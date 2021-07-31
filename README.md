@@ -20,3 +20,7 @@ Then run the reload script for it to take effect:
 ```
 sh scripts/prometheus-reload.sh
 ```
+
+## Grafana
+
+Grafana is already preconfigured to use the Prometheus service as the data source.
