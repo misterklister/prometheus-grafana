@@ -1,4 +1,4 @@
-FROM prom/prometheus
+FROM ${PROMETHEUS_IMAGE}
 ADD prometheus.yml /etc/prometheus/
 ADD targets.json /etc/prometheus/
 
