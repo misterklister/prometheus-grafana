@@ -1,6 +1,8 @@
-# Grafana
+# prometheus-grafana
 
-## Configure default user
+## Grafana
+
+### Configure default user
 
 Change these lines in `services/grafana/grafana.ini` accordingly:
 ```
@@ -11,13 +13,13 @@ admin_user = admin
 admin_password = admin
 ```
 
-# Prometheus
+## Prometheus
 
-## Configure scrape targets
+### Configure scrape targets
 
 See `services/prometheus/targets.json`
 
-## Hot reload scrape targets
+### Hot reload scrape targets
 Make changes to `services/prometheus/targets.json` on your host. Then either run:
 ```
 sh scripts/prometheus-reload.sh
@@ -25,7 +27,7 @@ sh scripts/prometheus-reload.sh
 
 Or see contents of `scripts/prometheus-reload.sh`, if you changed the default ports.
 
-# Run
+## Run
 
 1. Run `docker-compose up -d`
 2. Navigate to http://localhost:3000 to login
