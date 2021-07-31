@@ -1,8 +1,8 @@
 # prometheus-grafana
 
-## Grafana
+# Grafana
 
-### Configure default user
+## Configure default user
 
 Change these lines in `services/grafana/grafana.ini` accordingly:
 ```
@@ -13,13 +13,13 @@ admin_user = admin
 admin_password = admin
 ```
 
-## Prometheus
+# Prometheus
 
-### Configure scrape targets
+## Configure scrape targets
 
 See `services/prometheus/targets.json`
 
-### Hot reload scrape targets
+## Hot reload scrape targets
 Make changes to `services/prometheus/targets.json` on your host. Then either run:
 ```
 sh scripts/prometheus-reload.sh
