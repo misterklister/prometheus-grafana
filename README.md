@@ -26,3 +26,5 @@ So you don't have to rebuild to update it.
 ## Grafana
 
 Grafana is already preconfigured to use the Prometheus service as the data source.
+
+The data is stored and accessible in `data/grafana` on your host.
