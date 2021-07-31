@@ -7,7 +7,7 @@ Intended for simplicity, and to get started quickly.
 1. Run `docker-compose up -d`
 2. Navigate to http://localhost:3000 to login
 
-The login credentials are username `admin` and password `password`. 
+The login credentials are username `admin` and password `admin`. 
 
 You will be prompted to change these, after the first login.
 
