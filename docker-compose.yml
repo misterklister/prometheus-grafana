@@ -1,0 +1,36 @@
+version: "3"
+services:
+  grafana:
+    build:
+      context: ./services/grafana
+    container_name: ${GF_CONTAINER_NAME}
+    ports:
+      - ${GF_PORT}:3000
+    volumes:
+      - ${GF_DATA_DIRECTORY}:/var/lib/grafana   
+    environment:
+      - GF_USERS_ALLOW_SIGN_UP=${GF_USERS_ALLOW_SIGN_UP}
+      - GF_SMTP_ENABLED=${GF_SMTP_ENABLED}
+      - GF_SMTP_HOST=${GF_SMTP_HOST}
+      - GF_SMTP_USER=${GF_SMTP_USER}
+      - GF_SMTP_PASSWORD=${GF_SMTP_PASSWORD}
+      - GF_SMTP_FROM_ADDRESS=${GF_SMTP_FROM_ADDRESS}
+    networks:
+      - custom_net
+  prometheus:
+    build:
+      context: ./services/prometheus
+    container_name: ${PROMETHEUS_CONTAINER_NAME}
+    ports:
+      - ${PROMETHEUS_PORT}:9090
+    networks:
+      - custom_net
+    command: "--config.file=/etc/prometheus/prometheus.yml --web.enable-lifecycle"
+    volumes:
+     - ./services/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+     - ./services/prometheus/targets.json:/etc/prometheus/targets.json
+
+networks:
+  custom_net:
+    name: ${NETWORK_NAME}
+    driver: ${NETWORK_TYPE}
