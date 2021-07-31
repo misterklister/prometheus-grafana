@@ -5,7 +5,7 @@ Intended for simplicity, and to get started quickly.
 ## How to run
 
 1. Run `docker-compose up -d`
-2. Navigate to http://localhost:3000 to login
+2. Open the [Grafana WebUI](http://localhost:3000) to login
 
 The login credentials are username `admin` and password `admin`. 
 
